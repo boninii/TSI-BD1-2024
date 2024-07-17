@@ -12,6 +12,8 @@ Criar uma tabela "Cliente"
 
 -- CRIAÇÃO DO BANCO DE DADOS    
 CREATE DATABASE IFSP;
+DEFAULT CHARSET = utf8;
+DEFAULT COLLATE = utf8_general_ci;
 
 -- SELECIONAR O BANCO DE DADOS
 USE IFSP;
@@ -38,4 +40,27 @@ CREATE TABLE Cliente (
     data_nasc date
 );
 
+-- INSERIR DADOS NA TABELA CIDADE
+INSERT INTO Cidade (nome, estado) VALUES ("Guararapes", "SP");
+INSERT INTO Cidade (nome, estado) VALUES ("Birigui", "SP");
+INSERT INTO Cidade (nome, estado) VALUES ("Penápolis", "SP");
 
+INSERT INTO Cliente (nome, email, id_cidade, endereco, numero, bairro, data_nasc)
+VALUES ("Pedro Bonini", "pedro@gmail.com", 2, "João Cernach", 543, "Centro", "2005/04/19");
+
+INSERT INTO Cliente (nome, email, id_cidade, endereco, numero, bairro, data_nasc)
+VALUES ("Dudu Santos", "dudu@gmail.com", 2, "Rua 4", 147, "Inferno", "2005/07/05");
+
+-- MOSTRAR CONTEÚDO DA TABELA
+SELECT * FROM Cliente;
+SELECT * FROM Cidade;
+
+-- ATUALIZAÇÃO DE CAMPOS
+UPDATE  Cidade SET 
+        nome = "São Paulo",
+        estado = "SP"
+WHERE id = 1;
+
+-- DELETAR REGISTRO DA TABELA
+DELETE FROM Cidade  
+    WHERE id = 1;
