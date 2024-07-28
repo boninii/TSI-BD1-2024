@@ -112,8 +112,8 @@ ALTER TABLE Fornecedor ADD pais VARCHAR(30);
 UPDATE Fornecedor 
     SET pais = 'Brasil';
 -- K
-UPDATE Produto 
-    SET qtde = qtde - 1; --
+INSERT INTO Fornecedor (Codigo_fornec, Nome, Fone, Cidade, Estado) 
+    VALUES (69, "Pedrão", "9987548", "New Iorque", "NY");
 -- L
 DELETE FROM Fornecedor WHERE Estado <> 'SP';
 
