@@ -85,3 +85,36 @@ ALTER TABLE Fornecedor DROP COLUMN Endereco;
 UPDATE Produto 
     SET qtde = '15'
     WHERE nome = 'arroz';
+
+
+-- A
+SELECT * FROM Fornecedor;
+-- B
+SELECT Nome FROM Produto 'Nome dos Produtos' WHERE preco_unitario > 15; 
+-- C
+SELECT Nome, Codigo_fornec FROM Fornecedor WHERE Estado = 'SP';
+-- D
+SELECT Nome 'Nome Produto', preco_unitario * qtde 'Total' FROM Produto;
+-- E
+SELECT Cod_Produto 'Codigo Produto', Nome 'Nome Produto' FROM Produto WHERE Codigo_fornecedor = '78';
+-- F
+SELECT Codigo_fornec 'Codigo Fornecedor', Nome 'Nome Fornecedor' FROM Fornecedor WHERE Codigo_fornec < 100 AND Estado = 'SP';   
+-- G
+UPDATE Produto 
+    SET nome = 'leite desnatado'
+    WHERE nome = 'leite';
+-- H
+UPDATE Produto 
+    SET qtde = qtde - 1;
+-- I
+ALTER TABLE Fornecedor ADD pais VARCHAR(30);
+-- J
+UPDATE Fornecedor 
+    SET pais = 'Brasil';
+-- K
+UPDATE Produto 
+    SET qtde = qtde - 1; --
+-- L
+DELETE FROM Fornecedor WHERE Estado <> 'SP';
+
+
