@@ -118,3 +118,4 @@ INSERT INTO Fornecedor (Codigo_fornec, Nome, Fone, Cidade, Estado)
 DELETE FROM Fornecedor WHERE Estado <> 'SP';
 
 
+
